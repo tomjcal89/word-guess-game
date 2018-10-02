@@ -14,6 +14,10 @@ var correctLetters = [];
 var rand = words[Math.floor(Math.random() * words.length)]
 console.log(rand)
 
+
+document.getElementById ("demo").innerHTMl = words; 
+console.log(words)
+
 var answer = [];
 for (var i = 0; i < words.length; i++) {
     answer[i] = " _ ";
