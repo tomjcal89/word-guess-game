@@ -1,10 +1,26 @@
 
 // list of the words that will be guessed and availible letters
 
-var bowlingTerms = ["bumpers", "strike", "turkey", "spare", "gutter ball", "split", "bowling ball", "bowling lane", "perfect game", "bowling pins"];
+var words = ["bumpers", "strike", "turkey", "spare", "gutter ball", "split", "bowling ball", "bowling lane", "perfect game", "bowling pins"];
 
 // scoring and turns elements
 var score = 0;
-var remainGuess = 11;
+var guessLeft = 10;
+var wrongLetters = [];
+var correctLetters = [];
 
-var rand = bowlingTerms[Math.floor(Math.random() * bowlingTerms.length)];
+//staring the game
+
+var rand = words[Math.floor(Math.random() * words.length)]
+console.log(rand)
+
+var answer = [];
+for (var i = 0; i < words.length; i++) {
+    answer[i] = " _ ";
+}
+console.log (answer)
+
+
+
+
+
