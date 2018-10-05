@@ -9,39 +9,52 @@ var wrongGuessLetters = [];
 var chosenWord = " ";
 var placeHolder = [];
 
-
-
-
+//setting variables to my id's in my html to replace them with functions. 
 
 var wordSelection = document.getElementById("word-selection");
 var usedLetters = document.getElementById("used-letters");
 var numberWins = document.getElementById("number-wins");
 var guessesRemaining = document.getElementById("guesses-remaining")
 
-
-
-
-
-
 //computer randdomly selects a word for player to guess
- wordSelection = bowlWords[Math.floor(Math.random() * bowlWords.length)]; {
- console.log(wordSelection)
 
- for(var i = 0; i < wordSelection.length; i++) {
-     if(wordSelection[i] === " "){
-     placeHolder.push(" ");
-    } else {
-        placeHolder.push ("_")
+{
+wordSelection = bowlWords[Math.floor(Math.random() * bowlWords.length)]; 
+    console.log(wordSelection) 
+
+    for (var i = 0; i < wordSelection.length; i++) {
+        if (wordSelection[i] === " ") {
+            placeHolder.push(" ");
+        } else {
+            placeHolder.push("_")
+        
     }
 }
-    wordSelection.textContent = placeHolder.join("");
-    guessesRemaining.textContent = guessesLeft; 
-        
 
+    
+
+    //pushing variable to html to show on page.
+    wordSelection.textContent = placeHolder.join();
+    guessesRemaining.textContent = guessesLeft;
+    numberWins.textContent = wins;
+
+}
+
+    //pressing a wrong key will put incorrect letter in 
+    document.onkeyup = function(event) {
+    
+    var userGuess = event.key;
+
+    
  }
 
+    
 
- 
+
+
+
+
+
 
 
 
@@ -61,7 +74,7 @@ var guessesRemaining = document.getElementById("guesses-remaining")
 
 
  // when player guesses wrong letter, that letter will go into
- 
+
 
 
 
